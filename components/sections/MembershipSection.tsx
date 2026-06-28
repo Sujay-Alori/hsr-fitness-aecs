@@ -26,7 +26,7 @@ const plans = [
     id: "1m",
     name: "1 Month",
     tagline: "Start your journey",
-    price: 2300,
+    price: 2299,
     period: "/ month",
     icon: Calendar,
     accentFrom: "#3b82f6",
@@ -40,7 +40,7 @@ const plans = [
     id: "3m",
     name: "3 Months",
     tagline: "Build the habit",
-    price: 5000,
+    price: 4999,
     period: "/ 3 months",
     icon: CalendarDays,
     accentFrom: "#8b5cf6",
@@ -54,7 +54,7 @@ const plans = [
     id: "6m",
     name: "6 Months",
     tagline: "Serious commitment",
-    price: 7000,
+    price: 6999,
     period: "/ 6 months",
     icon: CalendarRange,
     accentFrom: "#f59e0b",
@@ -68,7 +68,7 @@ const plans = [
     id: "12m",
     name: "12 Months",
     tagline: "Best value — go all in",
-    price: 10000,
+    price: 9999,
     period: "/ year",
     icon: Crown,
     accentFrom: "#DC2626",
@@ -205,15 +205,15 @@ function PricingCard({ plan, index }: { plan: (typeof plans)[number]; index: num
           style={
             plan.featured
               ? {
-                  background: `linear-gradient(135deg, ${plan.accentFrom}, ${plan.accentTo})`,
-                  color: "#fff",
-                  boxShadow: `0 6px 28px ${plan.glowColor}`,
-                }
+                background: `linear-gradient(135deg, ${plan.accentFrom}, ${plan.accentTo})`,
+                color: "#fff",
+                boxShadow: `0 6px 28px ${plan.glowColor}`,
+              }
               : {
-                  background: `${plan.badgeBg}`,
-                  border: `1px solid ${plan.accentFrom}44`,
-                  color: plan.accentTo,
-                }
+                background: `${plan.badgeBg}`,
+                border: `1px solid ${plan.accentFrom}44`,
+                color: plan.accentTo,
+              }
           }
         >
           Join Now
