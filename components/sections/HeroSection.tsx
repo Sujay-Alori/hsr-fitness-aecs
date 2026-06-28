@@ -174,7 +174,7 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <motion.div
           {...fadeUp(0.6)}
-          className="flex flex-col sm:flex-row items-center gap-4 mb-16 sm:mb-20"
+          className="flex flex-col sm:flex-row items-center gap-4 mb-8 sm:mb-10"
         >
           {/* Primary — Join Now */}
           <motion.button
@@ -230,8 +230,8 @@ export default function HeroSection() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className={`
                 group relative overflow-hidden
-                flex flex-col items-center sm:items-start gap-2
-                p-4 sm:p-5 rounded-2xl
+                flex flex-col items-center sm:items-start gap-1.5
+                p-3 sm:p-4 rounded-2xl
                 bg-gradient-to-br ${color}
                 border ${border} ${glow}
                 backdrop-blur-xl cursor-default
@@ -243,8 +243,8 @@ export default function HeroSection() {
               <div className="absolute -top-6 -right-6 w-16 h-16 rounded-full bg-red-600/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
 
               {/* Icon */}
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-red-600/20 border border-red-600/30 group-hover:bg-red-600/30 transition-colors duration-300">
-                <Icon className="w-5 h-5 text-red-400 group-hover:text-red-300 transition-colors duration-300" strokeWidth={2} />
+              <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-red-600/20 border border-red-600/30 group-hover:bg-red-600/30 transition-colors duration-300">
+                <Icon className="w-4 h-4 text-red-400 group-hover:text-red-300 transition-colors duration-300" strokeWidth={2} />
               </div>
 
               {/* Text */}
@@ -257,26 +257,6 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* ═══ SCROLL INDICATOR ═══ */}
-      <motion.button
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.4, duration: 0.6 }}
-        onClick={() => handleScroll("about")}
-        aria-label="Scroll to About"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 group cursor-pointer"
-      >
-        <span className="text-[10px] tracking-[0.25em] uppercase text-white/35 group-hover:text-white/60 transition-colors">
-          Scroll
-        </span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
-          className="w-8 h-8 rounded-full border border-white/15 flex items-center justify-center group-hover:border-red-600/50 transition-colors duration-300"
-        >
-          <ChevronDown className="w-4 h-4 text-white/40 group-hover:text-red-400 transition-colors duration-300" />
-        </motion.div>
-      </motion.button>
     </section>
   );
 }

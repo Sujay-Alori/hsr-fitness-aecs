@@ -9,21 +9,21 @@ import { useModal } from "@/context/ModalContext";
 import { EASE_OUT } from "@/lib/motion";
 
 const navLinks = [
-  { label: "Home",       href: "/" },
-  { label: "About",      href: "/#about" },
-  { label: "Services",   href: "/#services" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
   { label: "Membership", href: "/#membership" },
-  { label: "Gallery",    href: "/#gallery" },
-  { label: "Supplements",href: "/#supplements" },
-  { label: "Contact",    href: "/#contact" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Supplements", href: "/#supplements" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
-  const [scrolled,    setScrolled]    = useState(false);
-  const [menuOpen,    setMenuOpen]    = useState(false);
-  const [activeLink,  setActiveLink]  = useState("#home");
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("#home");
   const { openModal } = useModal();
 
   /* ── Track scroll position ── */
@@ -67,7 +67,7 @@ export default function Navbar() {
   const handleNavClick = useCallback(
     (href: string) => {
       setMenuOpen(false);
-      
+
       if (href.startsWith("/#")) {
         if (pathname === "/") {
           const hash = href.replace("/", "");
@@ -99,12 +99,12 @@ export default function Navbar() {
   /* ── Animation variants ── */
   const mobileMenuVariants = {
     closed: { x: "100%", opacity: 0, transition: { duration: 0.35, ease: EASE_OUT } },
-    open:   { x: "0%",   opacity: 1, transition: { duration: 0.35, ease: EASE_OUT } },
+    open: { x: "0%", opacity: 1, transition: { duration: 0.35, ease: EASE_OUT } },
   };
 
   const linkVariants = {
     closed: { x: 40, opacity: 0 },
-    open:   (i: number) => ({
+    open: (i: number) => ({
       x: 0,
       opacity: 1,
       transition: { delay: 0.1 + i * 0.07, duration: 0.4, ease: EASE_OUT },
@@ -116,7 +116,7 @@ export default function Navbar() {
       {/* ═══════════════ NAVBAR ═══════════════ */}
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0,   opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: EASE_OUT }}
         className={`
           fixed top-0 left-0 right-0 z-50 w-full
@@ -222,8 +222,8 @@ export default function Navbar() {
                   <motion.span
                     key="close"
                     initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0,   opacity: 1 }}
-                    exit={{   rotate:  90,  opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
                     <X className="w-5 h-5 text-white" />
@@ -231,9 +231,9 @@ export default function Navbar() {
                 ) : (
                   <motion.span
                     key="menu"
-                    initial={{ rotate:  90, opacity: 0 }}
-                    animate={{ rotate: 0,  opacity: 1 }}
-                    exit={{   rotate: -90, opacity: 0 }}
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
                     <Menu className="w-5 h-5 text-white" />
@@ -354,7 +354,7 @@ export default function Navbar() {
                   Book Free Trial
                 </motion.button>
                 <p className="mt-4 text-center text-xs text-white/30">
-                  © 2024 HSR Fitness World
+                  © 2026 HSR Fitness World
                 </p>
               </div>
             </motion.div>
