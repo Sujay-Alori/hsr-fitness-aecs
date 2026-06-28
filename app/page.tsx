@@ -5,7 +5,6 @@ import AboutSection from "@/components/sections/AboutSection";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
 import StatsSection from "@/components/sections/StatsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
-import TrainersSection from "@/components/sections/TrainersSection";
 import MembershipSection from "@/components/sections/MembershipSection";
 import GallerySection from "@/components/sections/GallerySection";
 import SupplementsSection from "@/components/sections/SupplementsSection";
@@ -20,7 +19,6 @@ export default function Home() {
       <WhyChooseSection />
       <StatsSection />
       <ServicesSection />
-      <TrainersSection />
       <MembershipSection />
       <SupplementsSection />
       <GallerySection />

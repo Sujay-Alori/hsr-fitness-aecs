@@ -12,7 +12,6 @@ const navLinks = [
   { label: "Home",       href: "/" },
   { label: "About",      href: "/#about" },
   { label: "Services",   href: "/#services" },
-  { label: "Trainers",   href: "/#trainers" },
   { label: "Membership", href: "/#membership" },
   { label: "Gallery",    href: "/#gallery" },
   { label: "Supplements",href: "/#supplements" },
