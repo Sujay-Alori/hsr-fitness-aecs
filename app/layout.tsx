@@ -32,6 +32,22 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18272685190"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18272685190');
+          `}
+        </Script>
+
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">
           {`
@@ -70,12 +86,10 @@ export default function RootLayout({
             src="https://www.googletagmanager.com/ns.html?id=GTM-PDWBXGXJ"
             height="0"
             width="0"
-            style={{
-              display: "none",
-              visibility: "hidden",
-            }}
+            style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        {/* End Google Tag Manager (noscript) */}
 
         <ModalProvider>
           {children}
